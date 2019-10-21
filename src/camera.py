@@ -4,15 +4,18 @@ import random
 
 # Module-wide variable
 cam = {
-    "started": True
-};
+    "started": False
+}
 
+# Turns the camera on  
 def turnCameraOn(onSuccess, onFailure):
     global cam
     cam["started"] = True
     if onSuccess is not None:
         onSuccess()
+    # cannot fail for now
     
+# Turns the camera off
 def turnCameraOff():
     global cam
     cam["started"] = False
