@@ -6,7 +6,7 @@ def initialize():
     global window
     window = Tk()
 
-    label = Label(fenetre, text="Payment")
+    label = Label(window, text="Payment")
     label.pack()
 
     button=Button(window, text="Fermer", command=window.quit)

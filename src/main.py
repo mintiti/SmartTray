@@ -1,6 +1,7 @@
 import camera
 import ml
 import display
+import payment
 from datetime import datetime
 
 ### SmartTray ###
@@ -32,14 +33,15 @@ def init():
     # Initialize the display module
     display.initialize(onClickPay, {}) # use default config
     
+    # Initialize the payment module
+    payment.initialize()
+    
     # Turn on the camera
     camera.turnCameraOn(onCamStart, onCamFail)
 
 
 def onClickPay():
-    # TODO Call the payment module
-    # does nothing for now
-    pass
+    payment.showWindow()
 
 def onCamStart(): 
     print("Camera started")
